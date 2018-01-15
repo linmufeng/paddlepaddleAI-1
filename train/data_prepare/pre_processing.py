@@ -10,7 +10,7 @@ def load_json(file):
         data = json.load(json_file)
         return data
 
-def pro_processing(id):
+def pre_processing(id):
     json_data= load_json("/home/kesci/work/Broad/INFO/meta.json")
     database=json_data['database']
     len_image=0
@@ -43,6 +43,6 @@ def pro_processing(id):
     return labelArr
 
 def getLabelArray(id):
-    labelArray = pro_processing(id) 
+    labelArray = pre_processing(id) 
     # np.set_printoptions(threshold='nan')
     # print labelArray
